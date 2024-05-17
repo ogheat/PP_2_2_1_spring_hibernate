@@ -31,7 +31,7 @@ public class UserDaoImp implements UserDao {
     }
 
     @Override
-    public User getUserWithCar(String model, int series) {
+    public User getUser(String model, int series) {
 
         try {
             Session session = sessionFactory.getCurrentSession();
@@ -42,9 +42,7 @@ public class UserDaoImp implements UserDao {
             User user = (User) query.getSingleResult();
             System.out.println(user.toString());
             return user;
-        } catch (HibernateException e) {
-            return null;
-        } catch (NoResultException e) {
+        } catch (NoResultException | HibernateException e) {
             System.out.println("Пользователь с моделью " + model + "и серией " + series + " не найден");
             return null;
         }

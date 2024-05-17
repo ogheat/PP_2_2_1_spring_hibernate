@@ -40,9 +40,9 @@ public class MainApp {
             System.out.println();
         }
 
-        userService.getUserWithCar("tesla model", 3);
-        userService.getUserWithCar("cherry tiggo", 4);
-        userService.getUserWithCar("vaz", 2107);
+        userService.getUser("tesla model", 3);
+        userService.getUser("cherry tiggo", 4);
+        userService.getUser("vaz", 2107);
 
 
         context.close();
