@@ -24,12 +24,12 @@ public class MainApp {
         User user = new User("pavel", "lazarchuk", "ogheat1337@gmail.com");
         Car car = new Car("tesla model", 3);
         user.setCar(car);
-        userService.add(user);
+        userService.addUser(user);
 
         User user1 = new User("ivan", "ivanov", "ivan1337@gmail.com");
         Car car1 = new Car("vaz", 2107);
         user1.setCar(car1);
-        userService.add(user1);
+        userService.addUser(user1);
 
         List<User> usersList = userService.listUsers();
         for (User users : usersList) {
